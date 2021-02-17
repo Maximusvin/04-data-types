@@ -97,3 +97,25 @@ btn1.addEventListener("click", () => {
 до 1000 - 5%, більше 1000 - 10% та подарунковий
 сертифікат на 200 гривень у подарунок!
 */
+
+const btn2 = document.querySelector(".js2");
+
+btn2.addEventListener("click", () => {
+  const orderPrice = prompt("Ваша сума замовлення?");
+
+  if (orderPrice < 500) {
+    alert(
+      `Ваша знижка 1%. До розрахунку ${orderPrice - orderPrice * 0.01} грн`
+    );
+  } else if (orderPrice > 500 && orderPrice < 1000) {
+    alert(
+      `Ваша знижка 5%. До розрахунку ${orderPrice - orderPrice * 0.05} грн`
+    );
+  } else {
+    alert(
+      `Ваша знижка 10%. До розрахунку ${
+        orderPrice - orderPrice * 0.1
+      } грн та подарунковий сертифікат на 200 грн`
+    );
+  }
+});
