@@ -103,7 +103,11 @@ const btn2 = document.querySelector(".js2");
 btn2.addEventListener("click", () => {
   const orderPrice = prompt("Ваша сума замовлення?");
 
-  if (orderPrice < 500) {
+  if (orderPrice === null) {
+    alert("Зачекайте! Куди ви зыбрались? Платити хто буде? ");
+  } else if (orderPrice.trim().length === 0) {
+    alert("Чим ви маєте розраховуватись? ");
+  } else if (orderPrice < 500) {
     alert(
       `Ваша знижка 1%. До розрахунку ${orderPrice - orderPrice * 0.01} грн`
     );
@@ -111,12 +115,14 @@ btn2.addEventListener("click", () => {
     alert(
       `Ваша знижка 5%. До розрахунку ${orderPrice - orderPrice * 0.05} грн`
     );
-  } else {
+  } else if (orderPrice > 1000) {
     alert(
       `Ваша знижка 10%. До розрахунку ${
         orderPrice - orderPrice * 0.1
       } грн та подарунковий сертифікат на 200 грн`
     );
+  } else {
+    alert('Ми приймеєм лише кошти. Ваше "Дякую" нас не цікавить');
   }
 });
 
