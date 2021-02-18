@@ -111,11 +111,11 @@ btn2.addEventListener("click", () => {
     alert(
       `Ваша знижка 1%. До розрахунку ${orderPrice - orderPrice * 0.01} грн`
     );
-  } else if (orderPrice > 500 && orderPrice < 1000) {
+  } else if (orderPrice >= 500 && orderPrice < 1000) {
     alert(
       `Ваша знижка 5%. До розрахунку ${orderPrice - orderPrice * 0.05} грн`
     );
-  } else if (orderPrice > 1000) {
+  } else if (orderPrice >= 1000) {
     alert(
       `Ваша знижка 10%. До розрахунку ${
         orderPrice - orderPrice * 0.1
