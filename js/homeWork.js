@@ -205,3 +205,35 @@ btn4.addEventListener("click", () => {
 */
 
 const btn5 = document.querySelector(".js5");
+
+btn5.addEventListener("click", () => {
+  const keyPressed = prompt("Нажміть одну із кнопок від 1 до =");
+
+  if (+keyPressed === 1) {
+    alert("!");
+  } else if (+keyPressed === 2) {
+    alert("@");
+  } else if (+keyPressed === 3) {
+    alert("#");
+  } else if (+keyPressed === 4) {
+    alert("$");
+  } else if (+keyPressed === 5) {
+    alert("%");
+  } else if (+keyPressed === 6) {
+    alert("^");
+  } else if (+keyPressed === 7) {
+    alert("&");
+  } else if (+keyPressed === 8) {
+    alert("*");
+  } else if (+keyPressed === 9) {
+    alert("(");
+  } else if (+keyPressed === 0) {
+    alert(")");
+  } else if (keyPressed === "-") {
+    alert("_");
+  } else if (keyPressed === "=") {
+    alert("+");
+  } else {
+    alert("Щось пішло не так. Потрібно тиснути клавішу від 1 до =");
+  }
+});
