@@ -119,3 +119,89 @@ btn2.addEventListener("click", () => {
     );
   }
 });
+
+// task-3
+/* 
+Створити тест на знання будь-чого, юзер має відповісти на
+5 питань, вірна відповідь - 1 бал, якщо юзер відповість
+правильно на всі 5 запитань - додатково додати 1
+бонусний бал.
+*/
+
+const btn3 = document.querySelector(".js3");
+
+btn3.addEventListener("click", () => {
+  const question1 = prompt("1. Який це буде колір #fff");
+
+  const question2 = confirm(
+    "2. Тег div це строковий тег? Якщо так - жми Ок, якщо ні - клікай на відміну"
+  );
+  const question3 = prompt("3. Що виведе консоль? ('' + 1 + 0)");
+  const question4 = prompt("4. Скільки буде 2 + 2 * 2 + 2 * 2");
+  const question5 = prompt("5.  Скільки буде (2 + 2) * (2 + 2) * 2");
+
+  let totalPoint = null;
+
+  if (!question1) {
+    totalPoint;
+  } else if (question1.toLowerCase() === "білий") {
+    totalPoint += 1;
+  }
+
+  if (question2) {
+    totalPoint += 1;
+  }
+
+  if (question3 === "10") {
+    totalPoint += 1;
+  }
+
+  if (question4 === "10") {
+    totalPoint += 1;
+  }
+
+  if (question5 === "18") {
+    totalPoint += 1;
+  }
+
+  if (totalPoint === 5) {
+    totalPoint += 1;
+  }
+
+  alert(`Ви набрали ${totalPoint} балів`);
+});
+
+// task-4
+/* 
+Запитатись у користувача 3 значне число та сказати чи є у ньому однакові цифри 
+*/
+
+const btn4 = document.querySelector(".js4");
+
+btn4.addEventListener("click", () => {
+  const count = prompt("Введіть трьохзгачне число");
+
+  if (!count || !count.trim()) {
+    alert("Ви нічого не ввели. Спробуйте ще");
+  } else if (Number.isNaN(+count)) {
+    alert("Введіть число, а не текст");
+  }
+
+  const countArr = count.split("");
+
+  if (
+    countArr[0] === countArr[1] ||
+    countArr[0] === countArr[2] ||
+    countArr[1] === countArr[2]
+  ) {
+    alert("Дане число містить однакові цифри");
+  }
+});
+
+// task-5
+/* 
+Запитатись у юзера одну кнопоку від 1 до = на клавіатурі 
+та вивести що буде при нажиманні цифри разом з шифтом.
+*/
+
+const btn5 = document.querySelector(".js5");
