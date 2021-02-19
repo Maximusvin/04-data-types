@@ -104,7 +104,7 @@ btn2.addEventListener("click", () => {
   const orderPrice = prompt("Ваша сума замовлення?");
 
   if (orderPrice === null) {
-    alert("Зачекайте! Куди ви зыбрались? Платити хто буде? ");
+    alert("Зачекайте! Куди ви зібрались? Платити хто буде? ");
   } else if (orderPrice.trim().length === 0) {
     alert("Чим ви маєте розраховуватись? ");
   } else if (orderPrice < 500) {
